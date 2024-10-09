@@ -73,7 +73,7 @@ export const isAdminOrTeacherOrStudent = async (req, res, next) => {
     } else {
       return res
         .status(403)
-        .send({ message: "Only Admin or Teacher Access!", sucess: false });
+        .send({ message: "Only Admin or Teacher or student Access!", sucess: false });
     }
   } catch (error) {
     return res.status(401).send({ message: "Access denined!", success: false });
